@@ -61,8 +61,8 @@ class Article:
         self._author = author
         self._magazine = magazine
         self._title = title
-        self._author.articles().append(self)
-        self._magazine.articles().append(self)
+        self._author._articles.append(self)
+        self._magazine._articles.append(self)
 
     @property
     def title(self):
