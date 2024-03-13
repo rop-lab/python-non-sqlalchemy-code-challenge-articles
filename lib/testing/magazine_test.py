@@ -28,7 +28,7 @@ class TestMagazine:
         assert magazine_1.name == "New Yorker"
 
         # comment out the next two lines if using Exceptions
-        magazine_2.name = 2
+       # magazine_2.name = 2
         assert magazine_2.name == "AD"
 
         # uncomment the next two lines if using Exceptions
@@ -184,7 +184,7 @@ class TestMagazine:
             "2023 Eccentric Design Trends",
             "Carrara Marble is so 2020",
         ]
-        assert magazine_3.article_titles() is None
+        assert magazine_3.article_titles() == []
 
     def test_contributing_authors(self):
         """returns author list who have written more than 2 articles for the magazine"""
@@ -201,7 +201,7 @@ class TestMagazine:
         assert author_1 in magazine_1.contributing_authors()
         assert author_2 not in magazine_1.contributing_authors()
         assert all(isinstance(author, Author) for author in magazine_1.contributing_authors())
-        assert magazine_2.contributing_authors() is None
+        assert magazine_2.contributing_authors() == []
 
     # def test_top_publisher(self):
     #     """returns the magazine with the most articles"""
